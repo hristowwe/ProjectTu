@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
 public class TaskRepository {
     private static Map<String, Task> tasks = new ConcurrentHashMap<>();
 
@@ -13,6 +14,10 @@ public class TaskRepository {
 
     public static Task getTask(String id) {
         return tasks.get(id);
+    }
+
+    public static Task deleteTask(String id) {
+        return tasks.remove(id);
     }
 
     public static Collection<Task> getAllTasks() {
