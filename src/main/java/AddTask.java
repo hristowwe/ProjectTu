@@ -33,6 +33,10 @@ public class AddTask extends HttpServlet {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.marshal(task, response.getOutputStream());
 
+
+//            String id = request.getParameter("id");
+//            String title = request.getParameter("title");
+//            String description = request.getParameter("description");
         } catch (Exception e) {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_BAD_REQUEST,
